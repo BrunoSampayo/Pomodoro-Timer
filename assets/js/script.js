@@ -85,7 +85,7 @@ function cron(control) {
 
                 }
                 document.querySelector(".pomodoro .time").innerHTML = `${fixZero(minutes)}:${fixZero(seconds)}`;
-            }, 5
+            }, 1000
 
 
         )
