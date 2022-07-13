@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/tomatoicon.png">
+
+</head>
+
+<body>
+    <audio id='wee' src="assets/sound/wee.mp3"></audio>
+    <div id="container">
+        <div class="pomodoro">
+            <div class="state">
+                <div class="state-1 active">Pomodoro</div>
+                <div class="state-2 ">Short Break</div>
+                <div class="state-3">Long Break</div>
+            </div>
+            <div class="statePointers">
+                <div class="pointer green-animated"></div>
+                <div class="pointer"></div>
+                <div class="pointer"></div>
+                <div class="pointer"></div>
+            </div>
+            <div class="time">25:00</div>
+            <div class="controls">
+                <div onclick="start()">Start</div>
+                <div onclick="reset()">Reset</div>
+                <div onclick="stop()">Stop</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="assets/js/script.js "></script>
+
+</body>
+
+</html>

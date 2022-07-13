@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab';
+    color: #fff;
+}
+
+@keyframes pisca {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 80%;
+    }
+    80% {
+        opacity: 40%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+body {
+    background-color: #ef5d50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 700px;
+    height: 90vh;
+    display: flex;
+    margin: 20px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pomodoro {
+    max-width: 650px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../images/tomato.png);
+    background-position: center;
+    background-size: 350px;
+    background-repeat: no-repeat;
+}
+
+.pomodoro .state {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-weight: 600;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.pomodoro .state div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.pomodoro .statePointers {
+    display: flex;
+    margin-top: 10px;
+}
+
+.pomodoro .statePointers .pointer {
+    width: 25px;
+    height: 25px;
+    background-color: #ef5d50;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.green-animated {
+    background-color: #24a922 !important;
+    animation: pisca 2s infinite;
+}
+
+.green {
+    background-color: #24a922 !important;
+}
+
+.pomodoro .time {
+    font-weight: 600;
+    font-size: 80px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.pomodoro .controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-weight: 600;
+}
+
+.pomodoro .controls div {
+    max-width: 150px;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #ef5d50;
+    box-shadow: 1px 1px 1px #fff;
+}
+
+.pomodoro .controls div:hover {
+    color: #fff;
+    background-color: #ef5d50;
+    box-shadow: 1px 1px 1px #ef5d50;
+    cursor: pointer;
+}
+
+@media(max-width:580px) {
+    #container {
+        margin: 10px;
+    }
+    .pomodoro .state div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+    .pomodoro .controls div {
+        padding: 15px;
+        margin: 2px;
+    }
+}
