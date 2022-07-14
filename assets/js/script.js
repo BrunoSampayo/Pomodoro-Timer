@@ -84,6 +84,7 @@ function cron(control) {
 
 
                 }
+                document.title = `Pomodoro Timer  ${fixZero(minutes)}:${fixZero(seconds)}`
                 document.querySelector(".pomodoro .time").innerHTML = `${fixZero(minutes)}:${fixZero(seconds)}`;
             }, 1000
 
@@ -126,6 +127,7 @@ function stop() {
 }
 
 function reset() {
+    document.title = `Pomodoro Timer`;
     running = false
     clearInterval(timer)
     document.querySelector('.pomodoro .state .state-1').classList.add('active');
